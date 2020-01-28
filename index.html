@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>priklady z knihy
+    </h1>
+    <div><h2>priklad1</h2>
+    <p ID = "out1"> vystup: </p></div>
+    
+    <button id = "button_test" >my button</button>
+    <script>
+    
+   const sayHello1 = (name) =>
+   console.log('Hi ' + name);
+       
+
+   
+   const sayHello2 = (name, phrase) =>
+   console.log(phrase + " " + name);
+       
+   const sayHello3 = (name, phrase) => {
+   if ( typeof phrase == "undefined") {phrase = "dobry den"};
+   console.log(phrase + " " + name);
+    };
+
+
+   sayHello1("vv");
+   sayHello2("vv", "cau")
+   sayHello3("vv") 
+
+    // myarray = ["a","b","c","d","e"]
+    // test(myarray)
+    // function test(myarray){
+    // otp = "";
+    // for  (var i = 0;i<myarray.length; i++)
+    // {
+    //     var otp = otp +  myarray[i];
+    //     console.log(otp);
+    // }       
+    // };
+   
+        
+        //test2();
+        
+        //priklad kde sa poslednym vlozenim objektu prepise cely array, lebo je to by ref
+        // function test2(){
+        //     myarray = [{name: "asfdaf", surname: "fgadgf"}, {name: "bsdf", surname: "fsdgsg"}]
+        //     var one = {name: "x", surname: "x"};
+        //         var otp = [];
+        // for  (var i = 0;i<myarray.length; i++)
+        // {
+        //     one.name = myarray[i].name;
+        //     one.surname = myarray[i].surname;
+        //     otp[i] = one;
+        //     debugger;
+            
+        // }   
+        // console.log(otp);    
+        // };
+        
+
+        //console.log(myobj());
+
+        function myobj(){
+            var x = {}
+
+            x.name = "a"
+            x.surname = "b"
+
+            return x
+        }
+
+        //sposob ako vybrat z array objektov podmnozinu array objektov
+        function test2(){
+            myarray = [{name: "asfdaf", surname: "fgadgf"}, {name: "bsdf", surname: "fsdgsg"}]
+            outarr = [];
+            outObj = {};
+            //bezny zapis
+            outarr = myarray.map(function(input)
+                {
+                    outObj.name = input.name;
+                    return outObj ;
+                })
+            //zjednoduseny zapis
+            // outarr = myarray.map(input =>
+            // {
+            //     outObj.name = input.name;
+            //     return outObj ;
+            // })        
+            console.log("----------------")
+            console.log(myarray);    
+            
+            console.log("----------------")
+            console.log(outarr);    
+        };
+    </script>
+    
+</body>
+</html>
